@@ -1,0 +1,39 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+
+# Compiled binary addons
+build/Release
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.test
+
+# Optional caches
+.npm
+.eslintcache
+.cache
+.parcel-cache
+.next
+.nuxt
+dist

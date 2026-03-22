@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-slate-100 font-body antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(239, 68, 68, 0.08), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(15, 23, 42, 0.6), transparent);
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-ink;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-display font-semibold text-sm rounded-lg
+           hover:bg-red-600 active:scale-95 transition-all duration-150 shadow-lg shadow-accent/20;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 border border-border text-slate-300 font-body text-sm rounded-lg
+           hover:border-slate-400 hover:text-white active:scale-95 transition-all duration-150;
+  }
+
+  .card {
+    @apply bg-panel border border-border rounded-2xl;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono font-medium;
+  }
+
+  .badge-high {
+    @apply bg-red-500/15 text-red-400 border border-red-500/30;
+  }
+
+  .badge-medium {
+    @apply bg-orange-500/15 text-orange-400 border border-orange-500/30;
+  }
+
+  .badge-low {
+    @apply bg-yellow-500/15 text-yellow-400 border border-yellow-500/30;
+  }
+
+  .section-label {
+    @apply text-xs font-mono font-medium text-muted uppercase tracking-widest;
+  }
+}
+
+/* Scanning animation for loader */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(400%); }
+}
+
+.scanline {
+  animation: scanline 1.8s ease-in-out infinite;
+}
+
+/* Staggered fade in */
+.stagger-1 { animation-delay: 0ms; }
+.stagger-2 { animation-delay: 80ms; }
+.stagger-3 { animation-delay: 160ms; }
+.stagger-4 { animation-delay: 240ms; }
+.stagger-5 { animation-delay: 320ms; }
