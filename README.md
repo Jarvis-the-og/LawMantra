@@ -156,6 +156,15 @@ User uploads screenshot
 
 ---
 
+## Created jointly by-
+
+1. Rishabh Dev Pandey
+2. Mohak Jain
+3. Richa Singh
+4. Siddharth
+
+---
+
 ## 📞 Useful Links
 
 - Report cybercrime: [cybercrime.gov.in](https://cybercrime.gov.in)
